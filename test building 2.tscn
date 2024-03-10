@@ -1,0 +1,1288 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://test building 2.gd" type="Script" id=1]
+[ext_resource path="res://test/test tile textures/base 1.png" type="Texture" id=2]
+[ext_resource path="res://test/test tile textures/base 2.png" type="Texture" id=3]
+[ext_resource path="res://test/test tile textures/base 3.png" type="Texture" id=4]
+[ext_resource path="res://test/test tile textures/base 4.png" type="Texture" id=5]
+[ext_resource path="res://test/test tile textures/base 5.png" type="Texture" id=6]
+[ext_resource path="res://test/test tile textures/base 6.png" type="Texture" id=7]
+[ext_resource path="res://test/test tile textures/base 7.png" type="Texture" id=8]
+[ext_resource path="res://test/test tile textures/base 8.png" type="Texture" id=9]
+[ext_resource path="res://test/test tile textures/engine 1.png" type="Texture" id=10]
+[ext_resource path="res://test/test tile textures/engine 2.png" type="Texture" id=11]
+[ext_resource path="res://test/test tile textures/engine 3.png" type="Texture" id=12]
+[ext_resource path="res://test/test tile textures/engine 4.png" type="Texture" id=13]
+[ext_resource path="res://test/test tile textures/fuel 1.png" type="Texture" id=14]
+[ext_resource path="res://test/test tile textures/fuel 2.png" type="Texture" id=15]
+[ext_resource path="res://test/test tile textures/fuel 3.png" type="Texture" id=16]
+[ext_resource path="res://test/test tile textures/cockpit 1.png" type="Texture" id=17]
+[ext_resource path="res://test/test tile textures/cockpit 2.png" type="Texture" id=18]
+[ext_resource path="res://test/test tile textures/cockpit 3.png" type="Texture" id=19]
+[ext_resource path="res://test/test tile textures/laser 1.png" type="Texture" id=20]
+[ext_resource path="res://test/test tile textures/laser 2.png" type="Texture" id=21]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="mode select" type="Panel" parent="Control" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 224.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Focus", "Mouse", "Rect", "Visibility" ]
+
+[node name="pen" type="Button" parent="Control/mode select" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 64.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "pen"
+flat = false
+align = 1
+_sections_unfolded = [ "Mouse" ]
+
+[node name="eraser" type="Button" parent="Control/mode select" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 80.0
+margin_top = 8.0
+margin_right = 136.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "eraser"
+flat = false
+align = 1
+_sections_unfolded = [ "Focus" ]
+
+[node name="engine" type="Button" parent="Control/mode select" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 152.0
+margin_top = 8.0
+margin_right = 208.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "engine"
+flat = false
+align = 1
+
+[node name="tile select" type="TabContainer" parent="Control" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 224.0
+margin_top = 64.0
+margin_right = 872.0
+margin_bottom = 280.0
+rect_rotation = 89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+tab_align = 0
+tabs_visible = true
+_sections_unfolded = [ "Focus", "Mouse", "Rect", "Visibility" ]
+
+[node name="base" type="Tabs" parent="Control/tile select" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+tab_align = 1
+scrolling_enabled = true
+_sections_unfolded = [ "Focus", "Material", "Mouse", "Visibility" ]
+
+[node name="base 1" type="Button" parent="Control/tile select/base" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 168.0
+margin_right = 172.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 1" index="0"]
+
+position = Vector2( 80, 31.9996 )
+texture = ExtResource( 2 )
+
+[node name="base 2" type="Button" parent="Control/tile select/base" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 92.0
+margin_top = 168.0
+margin_right = 252.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 2" index="0"]
+
+position = Vector2( 79.9997, 31.9996 )
+texture = ExtResource( 3 )
+
+[node name="base 3" type="Button" parent="Control/tile select/base" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 252.0
+margin_top = 168.0
+margin_right = 412.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 3" index="0"]
+
+position = Vector2( 79.9995, 31.9996 )
+texture = ExtResource( 4 )
+
+[node name="base 4" type="Button" parent="Control/tile select/base" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 332.0
+margin_top = 168.0
+margin_right = 492.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 4" index="0"]
+
+position = Vector2( 79.9993, 31.9996 )
+texture = ExtResource( 5 )
+
+[node name="base 5" type="Button" parent="Control/tile select/base" index="4"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 412.0
+margin_top = 168.0
+margin_right = 572.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 5" index="0"]
+
+position = Vector2( 79.9991, 31.9996 )
+texture = ExtResource( 6 )
+
+[node name="base 6" type="Button" parent="Control/tile select/base" index="5"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 492.0
+margin_top = 168.0
+margin_right = 652.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 6" index="0"]
+
+position = Vector2( 79.9989, 31.9996 )
+texture = ExtResource( 7 )
+
+[node name="base 7" type="Button" parent="Control/tile select/base" index="6"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 572.0
+margin_top = 168.0
+margin_right = 732.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 7" index="0"]
+
+position = Vector2( 79.9987, 31.9996 )
+texture = ExtResource( 8 )
+
+[node name="base 8" type="Button" parent="Control/tile select/base" index="7"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 172.0
+margin_top = 168.0
+margin_right = 332.0
+margin_bottom = 232.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/base/base 8" index="0"]
+
+position = Vector2( 79.9987, 31.9996 )
+texture = ExtResource( 9 )
+
+[node name="engine" type="Tabs" parent="Control/tile select" index="1"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+tab_align = 1
+scrolling_enabled = true
+_sections_unfolded = [ "Mouse" ]
+
+[node name="engine 1" type="Button" parent="Control/tile select/engine" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 168.0
+margin_right = 172.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/engine/engine 1" index="0"]
+
+position = Vector2( 80, 39.9996 )
+texture = ExtResource( 10 )
+
+[node name="engine 2" type="Button" parent="Control/tile select/engine" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 108.0
+margin_top = 168.0
+margin_right = 268.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/engine/engine 2" index="0"]
+
+position = Vector2( 79.9997, 39.9996 )
+texture = ExtResource( 11 )
+
+[node name="engine 3" type="Button" parent="Control/tile select/engine" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 204.0
+margin_top = 168.0
+margin_right = 364.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/engine/engine 3" index="0"]
+
+position = Vector2( 79.9995, 39.9996 )
+texture = ExtResource( 12 )
+
+[node name="engine 4" type="Button" parent="Control/tile select/engine" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 300.0
+margin_top = 168.0
+margin_right = 460.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/engine/engine 4" index="0"]
+
+position = Vector2( 79.9993, 39.9996 )
+texture = ExtResource( 13 )
+
+[node name="fuel" type="Tabs" parent="Control/tile select" index="2"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+tab_align = 1
+scrolling_enabled = true
+_sections_unfolded = [ "Mouse" ]
+
+[node name="fuel 1" type="Button" parent="Control/tile select/fuel" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 168.0
+margin_right = 172.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/fuel/fuel 1" index="0"]
+
+position = Vector2( 80, 39.9996 )
+texture = ExtResource( 14 )
+
+[node name="fuel 2" type="Button" parent="Control/tile select/fuel" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 108.0
+margin_top = 168.0
+margin_right = 268.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/fuel/fuel 2" index="0"]
+
+position = Vector2( 79.9997, 39.9996 )
+texture = ExtResource( 15 )
+
+[node name="fuel 3" type="Button" parent="Control/tile select/fuel" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 204.0
+margin_top = 168.0
+margin_right = 364.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/fuel/fuel 3" index="0"]
+
+position = Vector2( 79.9995, 39.9996 )
+texture = ExtResource( 16 )
+
+[node name="cockpit" type="Tabs" parent="Control/tile select" index="3"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+tab_align = 1
+scrolling_enabled = true
+_sections_unfolded = [ "Mouse" ]
+
+[node name="cockpit 1" type="Button" parent="Control/tile select/cockpit" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 168.0
+margin_right = 172.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/cockpit/cockpit 1" index="0"]
+
+position = Vector2( 80, 39.9996 )
+texture = ExtResource( 17 )
+
+[node name="cockpit 2" type="Button" parent="Control/tile select/cockpit" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 108.0
+margin_top = 168.0
+margin_right = 268.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/cockpit/cockpit 2" index="0"]
+
+position = Vector2( 79.9997, 39.9996 )
+texture = ExtResource( 18 )
+
+[node name="cockpit 3" type="Button" parent="Control/tile select/cockpit" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 204.0
+margin_top = 168.0
+margin_right = 364.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/cockpit/cockpit 3" index="0"]
+
+position = Vector2( 79.9995, 39.9996 )
+texture = ExtResource( 19 )
+
+[node name="laser" type="Tabs" parent="Control/tile select" index="4"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+tab_align = 1
+scrolling_enabled = true
+_sections_unfolded = [ "Mouse" ]
+
+[node name="laser 1" type="Button" parent="Control/tile select/laser" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 168.0
+margin_right = 172.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/laser/laser 1" index="0"]
+
+position = Vector2( 80, 39.9996 )
+texture = ExtResource( 20 )
+
+[node name="laser 2" type="Button" parent="Control/tile select/laser" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 108.0
+margin_top = 168.0
+margin_right = 268.0
+margin_bottom = 248.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/tile select/laser/laser 2" index="0"]
+
+position = Vector2( 79.9997, 39.9996 )
+texture = ExtResource( 21 )
+
+[node name="tile controls" type="Control" parent="Control" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1136.0
+margin_top = 576.0
+margin_right = 1176.0
+margin_bottom = 616.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Focus", "Mouse", "Rect" ]
+
+[node name="reset" type="Button" parent="Control/tile controls" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Label" type="Label" parent="Control/tile controls/reset" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "reset"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="rotate right" type="Button" parent="Control/tile controls" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = -72.0
+margin_right = 64.0
+margin_bottom = -8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Label" type="Label" parent="Control/tile controls/rotate right" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "rotate
+right"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="rotate left" type="Button" parent="Control/tile controls" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -72.0
+margin_right = -8.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Label" type="Label" parent="Control/tile controls/rotate left" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "rotate
+left"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="flip horizontal" type="Button" parent="Control/tile controls" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 72.0
+margin_right = 136.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Label" type="Label" parent="Control/tile controls/flip horizontal" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "flip
+horizontal"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="flip vertical" type="Button" parent="Control/tile controls" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 72.0
+margin_right = 64.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Label" type="Label" parent="Control/tile controls/flip vertical" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "flip
+vertical"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="color" type="ColorPickerButton" parent="Control/tile controls" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 72.0
+margin_top = 72.0
+margin_right = 136.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+color = Color( 1, 1, 1, 1 )
+edit_alpha = true
+
+[node name="save" type="Button" parent="Control" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 520.0
+margin_top = 664.0
+margin_right = 561.0
+margin_bottom = 696.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "save"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="load" type="Button" parent="Control" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 720.0
+margin_top = 664.0
+margin_right = 761.0
+margin_bottom = 696.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "load"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="FileDialog" type="FileDialog" parent="Control" index="5"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_top = 136.0
+margin_right = 904.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Open a File"
+resizable = true
+dialog_hide_on_ok = false
+mode_overrides_title = true
+mode = 0
+access = 2
+filters = PoolStringArray( "*.save" )
+show_hidden_files = false
+current_dir = "G:/USB Backup/PortableApps/Godot Engine 3/Projects/Space Tile Game Ver 2"
+current_file = ""
+current_path = "G:/USB Backup/PortableApps/Godot Engine 3/Projects/Space Tile Game Ver 2/"
+
+[node name="start engine" type="Button" parent="Control" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 568.0
+margin_top = 656.0
+margin_right = 711.0
+margin_bottom = 704.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "START ENGINE"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="temporary" type="Node2D" parent="." index="1"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mouse" type="Node2D" parent="temporary" index="0"]
+
+[node name="canvas" type="Node2D" parent="temporary" index="1"]
+
+[node name="rigid body" type="Node2D" parent="." index="2"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+

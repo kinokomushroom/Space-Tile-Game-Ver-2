@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://test/test tile scenes/tile.gd" type="Script" id=1]
+[ext_resource path="res://test/test tile textures/base 3.png" type="Texture" id=2]
+
+[node name="base 3" type="CollisionPolygon2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 16, 0, 0, 16, 16, 16 )
+script = ExtResource( 1 )
+tile_name = "base 3"
+type = "Base"
+mass = 0.125
+com = Vector2( 10.67, 10.67 )
+moi = 3.56
+property_1 = null
+property_2 = null
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="raycast" type="Node2D" parent="." index="1"]
+
+[node name="RayCast2D" type="RayCast2D" parent="raycast" index="0"]
+
+position = Vector2( 8, 16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 4 )
+collision_mask = 1
+
+[node name="RayCast2D2" type="RayCast2D" parent="raycast" index="1"]
+
+position = Vector2( 16, 8 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 4, 0 )
+collision_mask = 1
+
+[node name="RayCast2D3" type="RayCast2D" parent="raycast" index="2"]
+
+position = Vector2( 8, 8 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( -2.82, -2.82 )
+collision_mask = 1
+
+

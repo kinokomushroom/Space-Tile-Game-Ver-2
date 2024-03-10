@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://test/test tile scenes/tile.gd" type="Script" id=1]
+[ext_resource path="res://test/test tile textures/laser 2.png" type="Texture" id=2]
+
+[node name="laser 2" type="CollisionPolygon2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -16, -8, 16, 8, 16, 8, -16 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+tile_name = "laser 2"
+type = "Laser"
+mass = 0.5
+com = Vector2( 0, 0 )
+moi = 53.33
+property_1 = 0.0
+property_2 = null
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="raycast" type="Node2D" parent="." index="1"]
+
+[node name="RayCast2D" type="RayCast2D" parent="raycast" index="0"]
+
+position = Vector2( -8, 16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 4 )
+collision_mask = 1
+
+[node name="RayCast2D2" type="RayCast2D" parent="raycast" index="1"]
+
+position = Vector2( 8, 16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 4 )
+collision_mask = 1
+
+[node name="RayCast2D3" type="RayCast2D" parent="raycast" index="2"]
+
+position = Vector2( 8, -16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, -4 )
+collision_mask = 1
+
+[node name="RayCast2D4" type="RayCast2D" parent="raycast" index="3"]
+
+position = Vector2( -8, -16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, -4 )
+collision_mask = 1
+
+

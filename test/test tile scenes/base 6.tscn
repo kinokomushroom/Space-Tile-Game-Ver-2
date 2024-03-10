@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://test/test tile scenes/tile.gd" type="Script" id=1]
+[ext_resource path="res://test/test tile textures/base 6.png" type="Texture" id=2]
+
+[node name="base 6" type="CollisionPolygon2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -16, -32, 16, 32, 16 )
+script = ExtResource( 1 )
+tile_name = "base 6"
+type = "Base"
+mass = 1.0
+com = Vector2( 10.67, 5.33 )
+moi = 284.44
+property_1 = null
+property_2 = null
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="raycast" type="Node2D" parent="." index="1"]
+
+[node name="RayCast2D" type="RayCast2D" parent="raycast" index="0"]
+
+position = Vector2( -24, 16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 4 )
+collision_mask = 1
+
+[node name="RayCast2D2" type="RayCast2D" parent="raycast" index="1"]
+
+position = Vector2( -8, 16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 4 )
+collision_mask = 1
+
+[node name="RayCast2D3" type="RayCast2D" parent="raycast" index="2"]
+
+position = Vector2( 8, 16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 4 )
+collision_mask = 1
+
+[node name="RayCast2D4" type="RayCast2D" parent="raycast" index="3"]
+
+position = Vector2( 24, 16 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 4 )
+collision_mask = 1
+
+[node name="RayCast2D5" type="RayCast2D" parent="raycast" index="4"]
+
+position = Vector2( 32, 8 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 4, 0 )
+collision_mask = 1
+
+[node name="RayCast2D6" type="RayCast2D" parent="raycast" index="5"]
+
+position = Vector2( 32, -8 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 4, 0 )
+collision_mask = 1
+
+[node name="RayCast2D7" type="RayCast2D" parent="raycast" index="6"]
+
+position = Vector2( 16, -8 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( -1.79, -3.58 )
+collision_mask = 1
+
+[node name="RayCast2D8" type="RayCast2D" parent="raycast" index="7"]
+
+position = Vector2( -16, 8 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( -1.79, -3.58 )
+collision_mask = 1
+
+

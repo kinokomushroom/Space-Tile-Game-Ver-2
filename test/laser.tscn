@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://test/laser.gd" type="Script" id=1]
+
+[node name="laser" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+
+rotation = 1.5708
+polygon = PoolVector2Array( -32, -4, 32, -4, 32, 4, -32, 4 )
+uv = PoolVector2Array(  )
+color = Color( 0.203125, 1, 0.36499, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+rotation = 1.5708
+build_mode = 0
+polygon = PoolVector2Array( -32, -4, -32, 4, 32, 4, 32, -4 )
+_sections_unfolded = [ "Transform" ]
+
+
